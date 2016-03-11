@@ -16,3 +16,12 @@ source "http://rubygems.org"
 
 # Show method sources
   gem "method_source"
+
+# Metatag extraction 		
+  gem "metainspector"
+
+# HTTP client and parser
+  gem "mechanize"
+
+# can't help it
+  gem "byebug"

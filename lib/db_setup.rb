@@ -13,7 +13,7 @@ ActiveRecord::Base.establish_connection(
   database: DATABASE_PATH
 )
 
-class Migrations < ActiveRecord::Migration
+class Migrations < ActiveRecord::Migration[4.2]
   def up
     create_table :todos do |t|
       t.string :content
@@ -31,4 +31,4 @@ class Migrations < ActiveRecord::Migration
 end # Migrations
 
 class Todo < ActiveRecord::Base
-end
+end 

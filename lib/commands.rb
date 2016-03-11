@@ -1,8 +1,29 @@
+require 'byebug' 
+
 # defines ActiveRecord models
 # defined DATABASE_PATH
 require_relative("./db_setup.rb")
+require_relative("./metatagger.rb")
 
 class Commands
+
+# Custom stuff
+
+  def search(query, page=0)
+    ap Metatagger.search(query, page)
+  end
+
+  def search_wikipedia(query, page=0)
+    ap Metatagger.search_site("wikipedia.org", query, page)
+  end
+
+  def search_site(site, query, page=0)
+    ap Metatagger.search_site(site, query, page)
+  end
+
+
+# Standard stuff
+
     # make sure this method accepts a hash argument, which is passed from OptionParser
   def initialize(options={})
     # test db connection
