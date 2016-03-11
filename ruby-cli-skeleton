@@ -32,7 +32,7 @@ class RubyCliSkeleton < COMMANDS_CLASS
   # more commands are defined in lib/commands.rb
   def no_help_methods
     # list of methods which are ignored when the "help" command lists all methods
-    [:no_help_methods, :print_and_return]
+    [:no_help_methods, :print_and_return, :formatted_heredoc]
   end
   def print_and_return(obj)
     # a helper method (used by other commands)

@@ -4,22 +4,30 @@ require 'byebug'
 # defined DATABASE_PATH
 require_relative("./db_setup.rb")
 require_relative("./metatagger.rb")
+require_relative("./iki.rb")
 
 class Commands
 
 # Custom stuff
 
-  def search(query, page=0)
+  def google(query, page=0)
     ap Metatagger.search(query, page)
   end
 
-  def search_wikipedia(query, page=0)
+  def google_wikipedia(query, page=0)
     ap Metatagger.search_site("wikipedia.org", query, page)
   end
 
-  def search_site(site, query, page=0)
+  def google_site(site, query, page=0)
     ap Metatagger.search_site(site, query, page)
   end
+
+  def iki(query, gets_chomping=true)
+    ik = Iki.search(query, gets_chomping);
+    return gets_chomping ? nil : ik
+  end
+
+
 
 
 # Standard stuff

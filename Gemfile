@@ -25,3 +25,9 @@ source "http://rubygems.org"
 
 # can't help it
   gem "byebug"
+
+# wikipedia client
+  gem "wikipedia-client"
+
+# wikimarkdown
+  gem "wikicloth"
